@@ -28,7 +28,7 @@
         @if ($settings->logo)
             <div class="mt-2">
                 <p class="text-sm text-gray-500">Logo saat ini:</p>
-                <img src="{{ asset('storage/' . $settings->logo) }}" alt="Current Logo" class="mt-1 h-20">
+                <img src="{{ asset('images/logo.png') }}" class="w-20 h-20" alt="Logo" />
             </div>
         @endif
         @error('logo')
@@ -42,10 +42,11 @@
         <input id="favicon" type="file" name="favicon" class="mt-1 block w-full" accept="image/x-icon">
         <small class="text-gray-500">File yang diizinkan: ICO</small>
         @if ($settings->favicon)
-            <div class="mt-2">
-                <p class="text-sm text-gray-500">Favicon saat ini:</p>
-                <img src="{{ asset('storage/' . $settings->favicon) }}" alt="Current Favicon" class="mt-1 h-12">
-            </div>
+        <div class="mt-2">
+            <p class="text-sm text-gray-500">Favicon saat ini:</p>
+            <img src="{{ asset('favicon.ico') }}" alt="Current Favicon" class="mt-1 h-12">
+        </div>
+
         @endif
         @error('favicon')
             <x-input-error-set :message="$message" class="mt-2" />

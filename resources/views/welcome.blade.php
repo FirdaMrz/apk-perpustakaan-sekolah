@@ -18,7 +18,7 @@
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <a href="/" class="flex items-center">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <img src="{{ asset('images/logo.png') }}" class="w-20 h-20" alt="Logo" />
                 </a>
                 <div class="flex items-center space-x-4 mt-4 md:mt-0">
                     @auth
